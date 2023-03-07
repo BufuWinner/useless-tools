@@ -93,6 +93,7 @@ def global_search(query):
 def get_common_word():
     url = requests.get("https://raw.githubusercontent.com/sindresorhus/mnemonic-words/master/words.json")
     words = url.json()
+    # print(len(words))
     random_word = random.choice(words)
     return random_word
 
@@ -100,8 +101,8 @@ def get_common_word():
 def get_a_word():
     url = requests.get("https://raw.githubusercontent.com/words/an-array-of-english-words/master/index.json")
     raw = url.json()
-    # w_list = raw.keys()
-    word = random.choice(list(raw))
+    # print(len(raw))
+    word = random.choice(raw)
     return word
 
 def get_settings():
