@@ -1,0 +1,13 @@
+{
+    "Random Number": {
+        "min": 0,
+        "max": 1000
+    },
+    "Website Logo": {
+        "extension": "png"
+    },
+    "Sample Text": {
+        "export": false,
+        "type": "meat-and-filler"
+    }
+}
