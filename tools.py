@@ -106,7 +106,7 @@ def get_a_word():
     return word
 
 def get_settings():
-    with open("settings.json", "r") as js:
+    with open("./settings.json", "r") as js:
         settings = json.load(js)
     return settings
 
@@ -125,7 +125,8 @@ while inmenu:
         '7) Random not existing word',
         '8) Print Unicode code for character', 
         '9) Heads or Tails',
-        '10) Random Luther\'s insult'
+        '10) Random Luther\'s insult',
+        '11) Manage Pastebin'
     ]
     for opt in options:
         print(opt)
@@ -251,4 +252,7 @@ while inmenu:
         soup = bs4.BeautifulSoup(html_site, "html.parser")
         insult = soup.find("p", {"class": "larger"}).contents[0]
         print(insult)
-
+    
+    # PASTEBIN TOOL
+    elif chosen == 11:
+        pass
